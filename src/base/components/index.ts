@@ -1,6 +1,7 @@
 import { VueConstructor } from 'vue';
 import KlDivider from './kl.divider/index.vue';
 import KlMultiSelect from './kl.multi.select/index.vue';
+import KlSearch from './kl.search/index.vue';
 import KlSelect from './kl.select/index.vue';
 import KlText from './kl.text/index.vue';
 import KlValidation from './kl.validation/index.vue';
@@ -9,6 +10,7 @@ import KlValidation from './kl.validation/index.vue';
 const components = {
   KlDivider,
   KlMultiSelect,
+  KlSearch,
   KlSelect,
   KlText,
   KlValidation,
