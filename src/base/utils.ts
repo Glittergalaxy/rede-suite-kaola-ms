@@ -21,6 +21,39 @@ const filterEmpty = (data: any) => {
   }
 };
 
+const download = (url: string, params: any, isImage: boolean = true) => {
+  if (!url) {
+    return;
+  }
+
+  if (params) {
+    url += '?';
+    for (const param in params) {
+      if (params.hasOwnProperty(param)) {
+        if (Array.isArray(param[params])) {
+          /* eslint-disable no-loop-func */
+          params[param].forEach(el => url += `${param}[]=${el}&`);
+          /* eslint-enable no-loop-func */
+        } else if (params[param] != undefined) {
+          url += `${param}=${params[param]}&`;
+        }
+      }
+    }
+  }
+
+  if (isImage) {
+    const a = document.createElement('a') as any;
+    a.href = url;
+    a.download = true;
+    a.target = '_blank';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  } else {
+    window.open(url);
+  }
+};
+
 const blankToComma = (value: any) => {
   if (!value && value !== 0) {
     return '';
@@ -45,6 +78,7 @@ const queryAppend = (url: string, query: obj = {}) => {
 
 export default {
   filterEmpty,
+  download,
   blankToComma,
   queryAppend,
 };

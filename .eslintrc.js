@@ -19,6 +19,7 @@ module.exports = {
     'no-shadow': [0],
     'import/prefer-default-export': [0],
     'prefer-promise-reject-errors': [0],
+    'no-restricted-syntax': [0]
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
