@@ -1,15 +1,17 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
+import elementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import App from './app.vue';
+import all from './index';
 
-import KlText from '@/base/components/kl.text/index.vue';
+Vue.use(elementUI);
+Vue.use(all.Directives);
 
 /* eslint-disable no-new */
 new Vue({
-  components: {
-    KlText,
-  },
-  render(h) {
-    return (<kl-text content="这是一段文本这是一段文本这是一段文本这是一段文本"></kl-text>);
-  },
-}).$mount('#app');
+  el: '#app',
+  components: { App },
+  template: '<App/>',
+});

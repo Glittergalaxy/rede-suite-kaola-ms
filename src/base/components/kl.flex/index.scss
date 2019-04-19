@@ -1,0 +1,117 @@
+@import "@/style/mixins/index.scss";
+
+@include b(flex) {
+    display: flex;
+    
+    @include m(inline) {
+        display: inline-flex;
+    }
+
+    @include m(column) {
+      flex-direction: column;
+    }
+
+    @include m(column-reverse) {
+      flex-direction: column-reverse;
+    }
+
+    @include m(row-reverse) {
+      flex-direction: row-reverse;
+    }
+
+    @include m(nowrap) {
+      flex-wrap: nowrap;
+    }
+
+    @include m(wrap-reverse) {
+      flex-wrap: wrap-reverse;
+    }
+
+    @include m(justify-content-center) {
+      justify-content: center;
+    }
+
+    @include m(justify-content-start) {
+      justify-content: start;
+    }
+
+    @include m(justify-content-end) {
+      justify-content: end;
+    }
+
+    @include m(justify-content-between) {
+      justify-content: space-between;
+    }
+
+    @include m(justify-content-around) {
+      justify-content: space-around;
+    }
+
+    @include m(align-items-center) {
+      align-items: center;
+    }
+
+    @include m(align-items-start) {
+      align-items: flex-start;
+    }
+
+    @include m(align-items-end) {
+      align-items: flex-end;
+    }
+
+    @include m(align-items-baseline) {
+      align-items: baseline;
+    }
+
+    @include m(align-items-stretch) {
+      align-items: stretch;
+    }
+
+    @include m(align-content-center) {
+      align-content: center;
+    }
+
+    @include m(align-content-start) {
+      align-content: flex-start;
+    }
+
+    @include m(align-content-end) {
+      align-content: flex-end;
+    }
+
+    @include m(align-content-between) {
+      align-content: between;
+    }
+
+    @include m(align-content-around) {
+      align-content: around;
+    }
+
+    @include m(align-content-stretch) {
+      align-content: stretch;
+    }
+
+    @include m(align-self-center) {
+      align-self: center;
+    }
+
+    @include m(align-self-start) {
+      align-self: flex-start;
+    }
+
+    @include m(align-self-end) {
+      align-self: flex-end;
+    }
+
+    @include m(align-self-auto) {
+      align-self: auto;
+    }
+
+    @include m(align-self-baseline) {
+      align-self: baseline;
+    }
+
+    @include m(align-self-stretch) {
+      align-self: stretch;
+    }
+}

@@ -4,6 +4,7 @@ import KlMultiSelect from './kl.multi.select/index.vue';
 import KlSelect from './kl.select/index.vue';
 import KlText from './kl.text/index.vue';
 import KlValidation from './kl.validation/index.vue';
+import KLFlex from './kl.flex/index.vue';
 
 
 const components = {
@@ -15,7 +16,7 @@ const components = {
 };
 
 export default (Vue: VueConstructor) => {
-  Object.values(components).forEach((component) => {
+  Object.values(components).forEach((component: any) => {
     Vue.component(component.name, component);
   });
 
